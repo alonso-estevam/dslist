@@ -21,9 +21,14 @@ public class Game {
 	@Column(name = "game_year") // customize the name of the column in database
 	private Integer year;
 	private String genre;
-	private String platform;
+	private String platforms;
+	private Double score;
 	private String imgUrl;
+	
+	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
+	
+	@Column(columnDefinition = "TEXT")
 	private String longDescription;
 	
 	public Long getId() {
@@ -50,11 +55,17 @@ public class Game {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	public String getPlatform() {
-		return platform;
+	public Double getScore() {
+		return score;
 	}
-	public void setPlatform(String platform) {
-		this.platform = platform;
+	public void setScore(Double score) {
+		this.score = score;
+	}
+	public String getPlatforms() {
+		return platforms;
+	}
+	public void setPlatforms(String platforms) {
+		this.platforms = platforms;
 	}
 	public String getImgUrl() {
 		return imgUrl;
